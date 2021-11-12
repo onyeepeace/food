@@ -1,7 +1,4 @@
-/* eslint-disable @next/next/no-img-element */
 import Image from "next/image";
-import Nav from "./nav";
-import styles from "../styles/Home.module.css";
 import heroStyles from "../styles/Hero.module.css";
 
 export default function Hero() {
@@ -10,20 +7,23 @@ export default function Hero() {
       <main className={heroStyles.main}>
         <div className={heroStyles.hero}>
           <div className={heroStyles.nav}>
-            <h1>LOGO</h1>
-            <p>About</p>
-            <p>About</p>
-            <p>About</p>
-            <p>About</p>
-            <p>About</p>
-            <p>About</p>
-            <p>About</p>
-            <p>About</p>
-            <p>About</p>
-            <p>About</p>
-            <p>About</p>
-            <p>About</p>
+            <div className={heroStyles.leftNav}>
+              <h1>LOGO</h1>
+              <ul>
+                <li>ABOUT</li>
+                <li>COMMUNITY</li>
+                <li>LOCATION</li>
+                <li>OUR MENU</li>
+                <li>RECIPES</li>
+              </ul>
+            </div>
+            <ul>
+              <li>CONTACT</li>
+              <li>LOGIN</li>
+            </ul>
           </div>
+          <img className={heroStyles.logo} src="/images/stamp.svg" alt="logo" />
+          <h4 className={heroStyles.request}>REQUEST INFO</h4>
           <div className={heroStyles.imgDiv}>
             <Image
               src={"/images/hero.png"}

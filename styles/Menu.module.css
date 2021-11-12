@@ -1,0 +1,152 @@
+.main {
+  width: 100%;
+  padding: 2rem;
+  font-family: DIN Condensed;
+  color: #333;
+  background-color: #0000000a;
+}
+
+.heading {
+  font-size: 3rem;
+  line-height: 1;
+  text-decoration: line-through #ffdac9;
+}
+
+.button {
+  background-color: #ffdac9;
+  border: none;
+  font-family: DIN Condensed;
+  font-size: 18px;
+  display: inline;
+  padding: 5px 8px;
+  margin-bottom: 1rem;
+}
+
+.menuOption,
+.divide {
+  margin-bottom: 4rem;
+}
+
+.divide {
+  border: 2px solid #ffdac9;
+}
+
+.starters h1 {
+  font-size: 3rem;
+  margin-top: 4rem;
+}
+
+.meals {
+  width: 50%;
+  margin-bottom: 3rem;
+}
+
+.meals h4 {
+  font-size: 14px;
+}
+
+.meals p {
+  font-family: Gill Sans;
+  font-size: 15px;
+  margin: 1rem 0;
+  color: #767676;
+}
+
+.meals button {
+  border: 2px solid #ffdac9;
+  background-color: transparent;
+  display: block;
+  padding: 8px 8px 4px;
+  font-family: DIN Condensed;
+  font-size: 14px;
+}
+
+@media screen and (min-width: 768px) {
+  .menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+  }
+
+  .divide {
+    /* display: none; */
+  }
+
+  .menuOption h1 {
+    margin-bottom: 1rem;
+  }
+
+  .meals {
+    width: 100%;
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .main {
+    position: relative;
+    padding: 0;
+  }
+
+  .menuHeading {
+    position: absolute;
+    left: 50%;
+    top: 12%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  .menu {
+    width: 80%;
+    margin: 0 auto;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 0;
+  }
+
+  .divide {
+    display: none;
+  }
+
+  .menuOption {
+    border-right: 1px solid #cecece;
+    margin-bottom: 0;
+    padding-top: 12rem;
+  }
+
+  .menuOption:last-child {
+    border-right: none;
+  }
+
+  .menuItem {
+    display: block;
+    padding: 2rem;
+  }
+
+  .meals {
+    margin-bottom: 3rem;
+  }
+
+  .mainCourse h1:first-of-type {
+    padding-top: 8rem;
+    margin-bottom: 0;
+  }
+
+  .mainCourse h1 {
+    text-indent: -8px;
+    overflow: hidden;
+  }
+
+  .sides h1 {
+    padding-top: 4rem;
+    text-indent: -8px;
+    overflow: hidden;
+  }
+
+  .desserts h1 {
+    padding-top: 1rem;
+    text-indent: -4px;
+    overflow: hidden;
+  }
+}

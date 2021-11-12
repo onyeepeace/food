@@ -1,41 +1,66 @@
-.main {
-  width: 100%; /* changes on desktop*/
-  padding: 2rem;
+.container {
   font-family: DIN Condensed;
   color: #333;
   background-color: #0000000a;
 }
 
-.main h1 {
-  text-align: center;
+.main {
+  width: 100%;
+  padding: 2rem;
 }
 
-.tacos {
-  display: flex;
+.heading {
+  font-size: 3rem;
+  line-height: 1;
 }
 
-.tacosImage {
+.heading span {
+  display: block;
+  text-decoration: line-through #ffdac9;
+}
+
+.button {
+  background-color: #ffdac9;
+  border: none;
+  font-family: DIN Condensed;
+  font-size: 18px;
+  display: inline;
+  padding: 5px 8px;
+  margin-bottom: 1rem;
+}
+
+.main h4 {
+  margin-bottom: 2rem;
+}
+
+.feed {
+  width: 100%;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
   position: relative;
-  width: 350px;
-  height: 350px;
+  margin: 2rem 0;
+}
+
+.feedImage {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 300px;
   background-color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.tacosImage > * {
-  margin: 0 auto;
-  width: 320px !important;
-  height: 320px !important;
-}
-
 .text {
-  width: 350px;
-  height: 350px;
-  margin-left: 1rem;
+  position: relative;
+  width: 300px;
+  height: 300px;
   background-color: #fff;
-  padding: 2rem 2rem 1rem;
+  padding: 0 2.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -70,4 +95,61 @@
 
 .likes {
   margin-left: 1rem;
+}
+
+.instagram {
+  position: absolute;
+  width: 20%;
+  top: 0%;
+  right: 0%;
+  z-index: 1;
+}
+
+.plus {
+  position: absolute;
+  width: 55%;
+  top: 75%;
+  left: 70%;
+  z-index: -1;
+}
+
+.line {
+  position: absolute;
+  width: 10%;
+  top: 78%;
+  left: 95%;
+  z-index: -1;
+}
+
+.period {
+  position: absolute;
+  width: 55%;
+  top: 55%;
+  left: 20%;
+  z-index: -1;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 100%;
+  }
+
+  .main {
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat (3, 1fr);
+  }
+
+  .feed {
+    width: 100%;
+  }
+
+  .feedImage,
+  .text {
+    width: 250px;
+    height: 250px;
+    border: 10px solid white;
+  }
 }

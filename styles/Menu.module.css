@@ -31,8 +31,11 @@
   border: 2px solid #ffdac9;
 }
 
-.starters h1 {
+.menuOption h1 {
   font-size: 3rem;
+}
+
+.starters h1 {
   margin-top: 4rem;
 }
 
@@ -59,27 +62,6 @@
   padding: 8px 8px 4px;
   font-family: DIN Condensed;
   font-size: 14px;
-}
-
-@media screen and (min-width: 768px) {
-  .menu {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 20px;
-  }
-
-  .divide {
-    /* display: none; */
-  }
-
-  .menuOption h1 {
-    margin-bottom: 1rem;
-  }
-
-  .meals {
-    width: 100%;
-    margin-bottom: 0;
-  }
 }
 
 @media screen and (min-width: 768px) {

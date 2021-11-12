@@ -19,27 +19,6 @@ export default function Menu() {
           start: "top 90%",
           end: "bottom 60%",
           toggleActions: "restart complete reverse reset",
-          //options: play, pause, resume, reset, restart, complete, reverse,none
-        },
-      });
-    });
-  }, []);
-
-  const upRefs = useRef([]);
-  upRefs.current = [];
-  useEffect(() => {
-    upRefs.current.forEach((up) => {
-      gsap.from(up, {
-        duration: 3,
-        y: "100",
-        opacity: 0,
-        ease: "ease-in",
-        scrollTrigger: {
-          trigger: up,
-          start: "top -90%",
-          end: "bottom -60%",
-          toggleActions: "restart complete reverse reset",
-          //options: play, pause, resume, reset, restart, complete, reverse,none
         },
       });
     });
@@ -48,12 +27,6 @@ export default function Menu() {
   const addToDownRefs = (down) => {
     if (down && !downRefs.current.includes(down)) {
       downRefs.current.push(down);
-    }
-  };
-
-  const addToUpRefs = (up) => {
-    if (up && !upRefs.current.includes(up)) {
-      upRefs.current.push(up);
     }
   };
 
@@ -96,28 +69,28 @@ export default function Menu() {
           <hr className={menuStyles.divide} />
 
           <div className={`${menuStyles.menuOption} ${menuStyles.mainCourse}`}>
-            {/* <div className=""> */}
-            <h1>MAIN </h1> <h1>COURSES</h1>
-            <div className={menuStyles.menuItem}>
-              <div className={menuStyles.meals}>
-                <h4>EL CLASICO</h4>
-                <p>
-                  Sea bass ceviche with aji limo tiger’s milk, sweet potato
-                  purée, choclo corn, red onion, coriander & plantain (gf)
-                </p>
-                <button>£8.95</button>
-              </div>
+            <div className="">
+              <h1>MAIN </h1> <h1>COURSES</h1>
+              <div className={menuStyles.menuItem}>
+                <div className={menuStyles.meals}>
+                  <h4>EL CLASICO</h4>
+                  <p>
+                    Sea bass ceviche with aji limo tiger’s milk, sweet potato
+                    purée, choclo corn, red onion, coriander & plantain (gf)
+                  </p>
+                  <button>£8.95</button>
+                </div>
 
-              <div className={menuStyles.meals}>
-                <h4>TIRADITO CALLAO</h4>
-                <p>
-                  Cobia tiradito with coriander tiger’s milk, black tobika,
-                  crème fraiche & sweet potato crunchies
-                </p>
-                <button>£6.95</button>
+                <div className={menuStyles.meals}>
+                  <h4>TIRADITO CALLAO</h4>
+                  <p>
+                    Cobia tiradito with coriander tiger’s milk, black tobika,
+                    crème fraiche & sweet potato crunchies
+                  </p>
+                  <button>£6.95</button>
+                </div>
               </div>
             </div>
-            {/* </div> */}
           </div>
 
           <hr className={menuStyles.divide} />
@@ -144,7 +117,7 @@ export default function Menu() {
           <hr className={menuStyles.divide} />
 
           <div className={`${menuStyles.menuOption} ${menuStyles.desserts}`}>
-            <div className="" ref={addToUpRefs}>
+            <div className="">
               <h1>DESSERTS</h1>
               <div className={menuStyles.menuItem}>
                 <div className={menuStyles.meals}>

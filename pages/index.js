@@ -1,5 +1,4 @@
 import Head from "next/head";
-import React, { useState, useEffect } from "react";
 import styles from "../styles/Home.module.css";
 import Hero from "../components/hero";
 import Community from "../components/community";
@@ -7,14 +6,6 @@ import Map from "../components/map";
 import Menu from "../components/menu";
 
 export default function Home() {
-  // const [offsetY, setOffsetY] = useState(0);
-  // const handleScroll = () => setOffsetY(window.pageYOffset);
-
-  // useEffect(() => {
-  //   window.addEventListener("scroll", handleScroll);
-
-  //   return () => window.removeEventListener("scroll", handleScroll);
-  // }, []);
   return (
     <div className={styles.container}>
       <Head>
@@ -26,10 +17,6 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        {/* <div
-          className=""
-          style={{ transform: `translateY(-${offsetY * 0.3}px)` }}
-        ></div> */}
         <Hero />
         <Community />
         <Map />
